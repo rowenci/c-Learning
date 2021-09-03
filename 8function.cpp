@@ -41,6 +41,7 @@ int main(){
 }
 
 // 传值调用
+// 不会影响实际参数
 int max(int num1, int num2){
     int result;
     if(num1 > num2) result = num1;
@@ -50,6 +51,7 @@ int max(int num1, int num2){
 
 // 指针调用
 // 带指针的参数需要传入的是地址
+// 会影响实际参数
 void swap1(int *x, int *y){
    int temp;
    temp = *x;    /* 保存地址 x 的值 */
@@ -58,11 +60,11 @@ void swap1(int *x, int *y){
 }
 
 // 引用调用
+// 传入的是引用
+// 会影响实际参数
 void swap2(int &x, int &y){
    int temp;
    temp = x; /* 保存地址 x 的值 */
    x = y;    /* 把 y 赋值给 x */
    y = temp; /* 把 x 赋值给 y  */
-  
-   return;
 }
