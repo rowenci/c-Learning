@@ -6,6 +6,8 @@ double getAverage(int *p, int size);
 double getAverage1(int arr[5]);
 double getAverage2(int arr[], int size);
 
+int * getArray();
+
 int main(){
 
     /*
@@ -65,8 +67,6 @@ int main(){
     avg = getAverage(p, 5);
     cout << avg << endl;
     */
-    
-
     /*
     如果函数是固定长度，那么不论传入的数组是多长，都会按5个来计算
     int arr[6] = {1, 2, 3, 4, 5, 6};
@@ -74,7 +74,6 @@ int main(){
     avg = getAverage1(arr);
     cout << avg << endl;
     */
-
     /*
     int arr[5] = {1, 2, 3, 4, 5};
     double avg;
@@ -82,7 +81,13 @@ int main(){
     cout << avg << endl;
     */
     
-
+    /*
+    int *r;
+    r = getArray();
+    for(int i = 0; i < 5; i++){
+        cout << r[i] << endl;
+    }
+    */
 
     return 0;
 }
@@ -90,7 +95,6 @@ int main(){
 /*
 传递数组给函数
 */
-
 double getAverage(int *p, int size){
     int sum = 0;
     double avg;
@@ -125,4 +129,12 @@ double getAverage2(int arr[], int size){
     avg = double(sum) / size;
 
     return avg;
+}
+
+/*
+从函数返回数组
+*/
+int * getArray(){
+    static int r[5] = {1, 2, 3, 4, 5};
+    return r;
 }
