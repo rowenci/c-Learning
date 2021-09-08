@@ -64,8 +64,12 @@ int main() {
 
     Student std2("rowenci2", 2, 2);
 
+    Student *sp;
+    sp = &std1;
+
     cout << std1.getName() << std1.getAge() << std1.getSex() << endl;
     cout << std2.getName() << std2.getAge() << std2.getSex() << endl;
+    cout << sp->getName() << sp->getAge() << sp->getSex() << endl;
 
     return 0;
 }
