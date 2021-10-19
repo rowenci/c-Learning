@@ -10,6 +10,8 @@ int main(){
     cout << "\t最大值：" << (numeric_limits<bool>::max)();
     cout << "\t\t最小值：" << (numeric_limits<bool>::min)() << endl;
 
+    // char     signed char     unsigned char
+    // 都是一个字节，只是取值范围不同
     cout << "char: \t\t" << "所占字节数：" << sizeof(char);  
     cout << "\t最大值：" << (numeric_limits<char>::max)();  
     cout << "\t\t最小值：" << (numeric_limits<char>::min)() << endl;
@@ -22,6 +24,7 @@ int main(){
     cout << "\t最大值：" << (numeric_limits<unsigned char>::max)();  
     cout << "\t\t最小值：" << (numeric_limits<unsigned char>::min)() << endl;  
     
+    // typedef short int wchar_t; 宽字符
     cout << "wchar_t: \t" << "所占字节数：" << sizeof(wchar_t);  
     cout << "\t最大值：" << (numeric_limits<wchar_t>::max)();  
     cout << "\t\t最小值：" << (numeric_limits<wchar_t>::min)() << endl;  

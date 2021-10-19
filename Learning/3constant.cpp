@@ -6,6 +6,7 @@ using namespace std;
 常量定义的方式
 1. #define 宏常量
 2. const修饰的变量
+常量定义完成之后不能作为左值，否则会报错。
 */
 
 #define day 7;
