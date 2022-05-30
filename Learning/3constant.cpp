@@ -14,7 +14,6 @@ using namespace std;
 #define day 7;
 
 int main(){
-
     cout << "一周有";
     cout << day;
     cout << "天" << endl;
