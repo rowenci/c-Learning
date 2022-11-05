@@ -4,6 +4,10 @@
         "limits": "cpp",
         "xstring": "cpp",
         "ostream": "cpp",
-        "xutility": "cpp"
+        "xutility": "cpp",
+        "exception": "cpp",
+        "memory": "cpp",
+        "tuple": "cpp",
+        "utility": "cpp"
     }
 }
