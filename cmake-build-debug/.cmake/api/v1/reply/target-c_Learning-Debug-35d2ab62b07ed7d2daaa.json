@@ -55,7 +55,9 @@
 			},
 			"sourceIndexes" : 
 			[
-				0
+				1,
+				3,
+				5
 			]
 		}
 	],
@@ -89,10 +91,21 @@
 	"sourceGroups" : 
 	[
 		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				0,
+				2,
+				4
+			]
+		},
+		{
 			"name" : "Source Files",
 			"sourceIndexes" : 
 			[
-				0
+				1,
+				3,
+				5
 			]
 		}
 	],
@@ -100,9 +113,36 @@
 	[
 		{
 			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "Template/temp1.cpp",
+			"path" : "DesignPattern/ResponsibilityChain/BaseHandler.h",
 			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "DesignPattern/ResponsibilityChain/HandlerA.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "DesignPattern/ResponsibilityChain/HandlerA.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "DesignPattern/ResponsibilityChain/HandlerB.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "DesignPattern/ResponsibilityChain/HandlerB.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "DesignPattern/ResponsibilityChain/TestRC.cpp",
+			"sourceGroupIndex" : 1
 		}
 	],
 	"type" : "EXECUTABLE"

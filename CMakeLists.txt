@@ -4,4 +4,4 @@ project(c_Learning)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(c_Learning
-        Template/temp1.cpp)
+        DesignPattern/ResponsibilityChain/BaseHandler.h DesignPattern/ResponsibilityChain/HandlerA.cpp DesignPattern/ResponsibilityChain/HandlerA.h DesignPattern/ResponsibilityChain/HandlerB.cpp DesignPattern/ResponsibilityChain/HandlerB.h DesignPattern/ResponsibilityChain/TestRC.cpp)
