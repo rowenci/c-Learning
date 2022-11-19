@@ -4,4 +4,6 @@ project(c_Learning)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(c_Learning
-        DesignPattern/ResponsibilityChain/BaseHandler.h DesignPattern/ResponsibilityChain/HandlerA.cpp DesignPattern/ResponsibilityChain/HandlerA.h DesignPattern/ResponsibilityChain/HandlerB.cpp DesignPattern/ResponsibilityChain/HandlerB.h DesignPattern/ResponsibilityChain/TestRC.cpp)
+        DesignPattern/Adaptor/MediaPlayer.h
+        DesignPattern/Adaptor/AdvancedMediaPlayer.h
+        DesignPattern/Adaptor/AudioPlayer.cpp DesignPattern/Adaptor/AudioPlayer.h DesignPattern/Adaptor/VLCPlayer.cpp DesignPattern/Adaptor/VLCPlayer.h DesignPattern/Adaptor/MP4Player.cpp DesignPattern/Adaptor/MP4Player.h DesignPattern/Adaptor/AdaptorDemo.cpp DesignPattern/Adaptor/MediaAdaptor.cpp DesignPattern/Adaptor/MediaAdaptor.h)

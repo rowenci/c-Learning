@@ -1,7 +1,7 @@
 //
 // Created by Rowenci on 2022/11/11.
 //
-
+#pragma once
 #ifndef C_LEARNING_BASEHANDLER_H
 #define C_LEARNING_BASEHANDLER_H
 

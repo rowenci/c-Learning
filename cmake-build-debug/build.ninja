@@ -49,23 +49,35 @@ cmake_ninja_workdir = E$:/Code/Codes/cpp/c-Learning/cmake-build-debug/
 
 build cmake_object_order_depends_target_c_Learning: phony || CMakeFiles/c_Learning.dir
 
-build CMakeFiles/c_Learning.dir/DesignPattern/ResponsibilityChain/HandlerA.cpp.obj: CXX_COMPILER__c_Learning_Debug E$:/Code/Codes/cpp/c-Learning/DesignPattern/ResponsibilityChain/HandlerA.cpp || cmake_object_order_depends_target_c_Learning
-  DEP_FILE = CMakeFiles\c_Learning.dir\DesignPattern\ResponsibilityChain\HandlerA.cpp.obj.d
+build CMakeFiles/c_Learning.dir/DesignPattern/Adaptor/AudioPlayer.cpp.obj: CXX_COMPILER__c_Learning_Debug E$:/Code/Codes/cpp/c-Learning/DesignPattern/Adaptor/AudioPlayer.cpp || cmake_object_order_depends_target_c_Learning
+  DEP_FILE = CMakeFiles\c_Learning.dir\DesignPattern\Adaptor\AudioPlayer.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\c_Learning.dir
-  OBJECT_FILE_DIR = CMakeFiles\c_Learning.dir\DesignPattern\ResponsibilityChain
+  OBJECT_FILE_DIR = CMakeFiles\c_Learning.dir\DesignPattern\Adaptor
 
-build CMakeFiles/c_Learning.dir/DesignPattern/ResponsibilityChain/HandlerB.cpp.obj: CXX_COMPILER__c_Learning_Debug E$:/Code/Codes/cpp/c-Learning/DesignPattern/ResponsibilityChain/HandlerB.cpp || cmake_object_order_depends_target_c_Learning
-  DEP_FILE = CMakeFiles\c_Learning.dir\DesignPattern\ResponsibilityChain\HandlerB.cpp.obj.d
+build CMakeFiles/c_Learning.dir/DesignPattern/Adaptor/VLCPlayer.cpp.obj: CXX_COMPILER__c_Learning_Debug E$:/Code/Codes/cpp/c-Learning/DesignPattern/Adaptor/VLCPlayer.cpp || cmake_object_order_depends_target_c_Learning
+  DEP_FILE = CMakeFiles\c_Learning.dir\DesignPattern\Adaptor\VLCPlayer.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\c_Learning.dir
-  OBJECT_FILE_DIR = CMakeFiles\c_Learning.dir\DesignPattern\ResponsibilityChain
+  OBJECT_FILE_DIR = CMakeFiles\c_Learning.dir\DesignPattern\Adaptor
 
-build CMakeFiles/c_Learning.dir/DesignPattern/ResponsibilityChain/TestRC.cpp.obj: CXX_COMPILER__c_Learning_Debug E$:/Code/Codes/cpp/c-Learning/DesignPattern/ResponsibilityChain/TestRC.cpp || cmake_object_order_depends_target_c_Learning
-  DEP_FILE = CMakeFiles\c_Learning.dir\DesignPattern\ResponsibilityChain\TestRC.cpp.obj.d
+build CMakeFiles/c_Learning.dir/DesignPattern/Adaptor/MP4Player.cpp.obj: CXX_COMPILER__c_Learning_Debug E$:/Code/Codes/cpp/c-Learning/DesignPattern/Adaptor/MP4Player.cpp || cmake_object_order_depends_target_c_Learning
+  DEP_FILE = CMakeFiles\c_Learning.dir\DesignPattern\Adaptor\MP4Player.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\c_Learning.dir
-  OBJECT_FILE_DIR = CMakeFiles\c_Learning.dir\DesignPattern\ResponsibilityChain
+  OBJECT_FILE_DIR = CMakeFiles\c_Learning.dir\DesignPattern\Adaptor
+
+build CMakeFiles/c_Learning.dir/DesignPattern/Adaptor/AdaptorDemo.cpp.obj: CXX_COMPILER__c_Learning_Debug E$:/Code/Codes/cpp/c-Learning/DesignPattern/Adaptor/AdaptorDemo.cpp || cmake_object_order_depends_target_c_Learning
+  DEP_FILE = CMakeFiles\c_Learning.dir\DesignPattern\Adaptor\AdaptorDemo.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\c_Learning.dir
+  OBJECT_FILE_DIR = CMakeFiles\c_Learning.dir\DesignPattern\Adaptor
+
+build CMakeFiles/c_Learning.dir/DesignPattern/Adaptor/MediaAdaptor.cpp.obj: CXX_COMPILER__c_Learning_Debug E$:/Code/Codes/cpp/c-Learning/DesignPattern/Adaptor/MediaAdaptor.cpp || cmake_object_order_depends_target_c_Learning
+  DEP_FILE = CMakeFiles\c_Learning.dir\DesignPattern\Adaptor\MediaAdaptor.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\c_Learning.dir
+  OBJECT_FILE_DIR = CMakeFiles\c_Learning.dir\DesignPattern\Adaptor
 
 
 # =============================================================================
@@ -75,7 +87,7 @@ build CMakeFiles/c_Learning.dir/DesignPattern/ResponsibilityChain/TestRC.cpp.obj
 #############################################
 # Link the executable c_Learning.exe
 
-build c_Learning.exe: CXX_EXECUTABLE_LINKER__c_Learning_Debug CMakeFiles/c_Learning.dir/DesignPattern/ResponsibilityChain/HandlerA.cpp.obj CMakeFiles/c_Learning.dir/DesignPattern/ResponsibilityChain/HandlerB.cpp.obj CMakeFiles/c_Learning.dir/DesignPattern/ResponsibilityChain/TestRC.cpp.obj
+build c_Learning.exe: CXX_EXECUTABLE_LINKER__c_Learning_Debug CMakeFiles/c_Learning.dir/DesignPattern/Adaptor/AudioPlayer.cpp.obj CMakeFiles/c_Learning.dir/DesignPattern/Adaptor/VLCPlayer.cpp.obj CMakeFiles/c_Learning.dir/DesignPattern/Adaptor/MP4Player.cpp.obj CMakeFiles/c_Learning.dir/DesignPattern/Adaptor/AdaptorDemo.cpp.obj CMakeFiles/c_Learning.dir/DesignPattern/Adaptor/MediaAdaptor.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\c_Learning.dir
