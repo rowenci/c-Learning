@@ -1,6 +1,9 @@
 //
 // Created by Rowenci on 2022/11/25.
 //
+#include "iostream"
+#include <ctime>
+#include <iomanip>
 #include "../Util.h"
 
 using namespace std;
@@ -14,6 +17,7 @@ using namespace std;
  *
  * 时间复杂度：最好：O(n2) 最坏：O(n2)
  * 空间复杂度：O(1)
+ * 稳定
  * */
 void bubbleSort(int arr[], int size){
     bool flag = false;  // 如果没发生交换，则已经有序，可以直接停止
@@ -43,28 +47,66 @@ void bubbleSort(int arr[], int size){
  * 4. left一步步往后走，找到第一个比pivot大的元素。随后，将right指向的元素赋值到该位置上
  * 5. 重复3、4直到left == right，此时left与right所指向位置也就是pivot元素最终的位置。将该位置的元素赋值为pivot
  * 而且，这个时候，pivot左边的元素都比它小，右边的元素都比它大
+ *
+ * 对于划分，其实有两种做法。
+ * 第一种：找到比pivot小或者大的之后，先不进行元素的替换。当left和right都到指定位置之后，先交换他们两个元素的位置
+ *       直到left == right时，交换pivot元素和left元素的位置
+ *       注意，如果觉得left == right时，为什么那么确定left指向元素就是比pivot小呢？
+ *       有两种情况，第一种是right找到了比pivot小的，此时是left走到right处。那么情况确实是left比pivot小
+ *                第二种是right没有找到，此时是right走到left处。但是因为在上一轮当中，left和right交换后，left指向的本来就是比pivot小的
+ * 第二种：当left或right找到之后，就开始进行元素的替换，找到right，就把right的元素换到left。
+ *       找到left，就把left的元素换到right。
+ *       直到left == right时，把left指向元素设置为pivot
+ * 第二种占用内存要小一些，因为第一种每次交换两个数都要int个temp
  * 递归：
  * 1. 当left < right时，执行下述步骤
  * 2. 划分一次，获得pivot的位置
  * 3. 对pivot左边元素继续递归
  * 4. 对pivot右边元素继续递归
+ *
+ *
+ * 时间复杂度：最好O(nlogn) 最坏O(n2)
+ * 空间复杂度：O(nlogn)
+ * 不稳定
  * */
-int partition(int arr[], int left, int right){
-    int pivot = arr[left];
-    while(left < right){
-        while(left < right && arr[right] >= pivot)
+int partition1(int arr[], int left, int right){
+    int pivot = arr[left];  // 设置枢轴值，一般选left指向元素
+    while(left < right){    // left == right时，划分停止
+        while(left < right && arr[right] >= pivot)  // 从后往前找第一个比pivot小的
             right--;
-        arr[left] = arr[right];
-        while(left < right && arr[left] <= pivot)
+        arr[left] = arr[right]; // 因为left元素已经被pivot记录，所以可以直接把小的元素赋到left指向元素
+        while(left < right && arr[left] <= pivot)   // 从前往后找第一个比pivot大的
             left++;
-        arr[right] = arr[left];
+        arr[right] = arr[left]; // 因为right已经到左边的，所以也可以直接赋值
     }
+    arr[left] = pivot;  // 找到枢轴值的位置，直接赋值
+    return left;
+}
+int partition2(int arr[], int left, int right){
+    int begin = left;   // 记录最开始left的位置
+    int pivot = arr[begin]; // 记录枢轴值
+    while(left < right){    // left == right时，划分停止
+        while(left < right && pivot <= arr[right])  // 从后往前找第一个比pivot小的
+            right--;
+        while(left < right && pivot >= arr[left])   // 从前往后找第一个比pivot大的
+            left++;
+        if(left < right){   // 此时还没到结束的时候
+            // 交换left和right的位置
+            int temp = arr[left];
+            arr[left] = arr[right];
+            arr[right] = temp;
+        }
+    }
+    // 此时left == right，而这个位置是right先到的，所以这个位置的元素一定比pivot小。而pivot就在最开始left指向的位置
+    // 因此交换left和pivot值的位置。
+    int temp = arr[left];
     arr[left] = pivot;
+    arr[begin] = temp;
     return left;
 }
 void quickSort(int arr[], int left, int right){
     if(left < right){
-        int pivot = partition(arr, left, right);
+        int pivot = partition2(arr, left, right);
         quickSort(arr, left, pivot - 1);
         quickSort(arr, pivot + 1, right);
     }
