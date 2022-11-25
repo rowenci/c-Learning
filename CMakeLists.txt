@@ -4,5 +4,5 @@ project(c_Learning)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(c_Learning
-        Algorithm/Sort/BubbleSort.cpp
+        Algorithm/Sort/SortAlgorithm.cpp
         Algorithm/Util.cpp Algorithm/Util.h)
