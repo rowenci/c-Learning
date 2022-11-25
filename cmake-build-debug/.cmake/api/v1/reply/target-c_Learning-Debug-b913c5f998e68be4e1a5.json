@@ -55,11 +55,8 @@
 			},
 			"sourceIndexes" : 
 			[
-				2,
-				4,
-				6,
-				8,
-				9
+				0,
+				1
 			]
 		}
 	],
@@ -93,26 +90,18 @@
 	"sourceGroups" : 
 	[
 		{
-			"name" : "Header Files",
-			"sourceIndexes" : 
-			[
-				0,
-				1,
-				3,
-				5,
-				7,
-				10
-			]
-		},
-		{
 			"name" : "Source Files",
 			"sourceIndexes" : 
 			[
-				2,
-				4,
-				6,
-				8,
-				9
+				0,
+				1
+			]
+		},
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				2
 			]
 		}
 	],
@@ -120,63 +109,20 @@
 	[
 		{
 			"backtrace" : 1,
-			"path" : "DesignPattern/Adaptor/MediaPlayer.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "DesignPattern/Adaptor/AdvancedMediaPlayer.h",
+			"compileGroupIndex" : 0,
+			"path" : "Algorithm/Sort/BubbleSort.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "DesignPattern/Adaptor/AudioPlayer.cpp",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : "DesignPattern/Adaptor/AudioPlayer.h",
+			"path" : "Algorithm/Util.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "DesignPattern/Adaptor/VLCPlayer.cpp",
+			"path" : "Algorithm/Util.h",
 			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : "DesignPattern/Adaptor/VLCPlayer.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "DesignPattern/Adaptor/MP4Player.cpp",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : "DesignPattern/Adaptor/MP4Player.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "DesignPattern/Adaptor/AdaptorDemo.cpp",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "DesignPattern/Adaptor/MediaAdaptor.cpp",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : "DesignPattern/Adaptor/MediaAdaptor.h",
-			"sourceGroupIndex" : 0
 		}
 	],
 	"type" : "EXECUTABLE"

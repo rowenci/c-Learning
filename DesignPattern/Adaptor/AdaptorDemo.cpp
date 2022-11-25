@@ -4,10 +4,10 @@
 #include "iostream"
 #include "AudioPlayer.h"
 
-int main(){
-    AudioPlayer* audioPlayer = new AudioPlayer();
-    audioPlayer->play(0);
-    audioPlayer->play(1);
-    audioPlayer->play(2);
-    return -1;
-}
+//int main(){
+//    AudioPlayer* audioPlayer = new AudioPlayer();
+//    audioPlayer->play(0);
+//    audioPlayer->play(1);
+//    audioPlayer->play(2);
+//    return -1;
+//}
