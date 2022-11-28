@@ -112,13 +112,39 @@ void quickSort(int arr[], int left, int right){
     }
 }
 
+/*
+ * 插入排序
+ * 分成两个子数组，第一个子数组内元素是有序的，第二个子数组是待插入数组
+ * 可以从第二个元素开始遍历，然后从后往前遍历第一个有序子数组
+ * 如果元素比待插入元素大，那么直接把这个元素往后移一位
+ * 找到待插入位置放入元素
+ *
+ * 时间复杂度 最好：O(n) 最坏：O(n2)
+ * 空间复杂度 O(n)
+ * 稳定
+ * */
+void insertionSort(int arr[], int size){
+    int temp;
+    int j;
+    for(int i = 1; i < size; i++){
+        temp = arr[i];
+        j = i - 1;
+        while(j >= 0 && temp < arr[j]){
+            arr[j + 1] = arr[j];
+            j--;
+        }
+        arr[j + 1] = temp;
+    }
+}
+
 #define ARRSIZE 10
 
 int main(){
     int arr[ARRSIZE] = {4, 2, 3, 1, 6, 5, 9, 7, 8, 10};
     printArr(arr, ARRSIZE);
-    // bubbleSort(arr, ARRSIZE);
-    quickSort(arr, 0, 9);
+//     bubbleSort(arr, ARRSIZE);
+//    quickSort(arr, 0, 9);
+    insertionSort(arr, ARRSIZE);
     printArr(arr, ARRSIZE);
     return 0;
 }
