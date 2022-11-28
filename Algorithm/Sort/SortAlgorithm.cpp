@@ -137,6 +137,31 @@ void insertionSort(int arr[], int size){
     }
 }
 
+/*
+ * 希尔排序
+ * 选中一个步长，一般最开始为size的一般，然后每次除以2
+ * 对步长当中的元素进行插入排序
+ * 直到步长为0时，停止
+ *
+ * 时间复杂度：最好：O(n) 最坏：O(n2)
+ * 空间复杂度：O(1)
+ * 不稳定
+ * */
+void shellSort(int arr[], int size){
+    int temp, j;
+    for(int gap = size / 2; gap > 0; gap /= 2){
+        for(int i = gap; i < size; i++){
+            temp = arr[i];
+            j = i - gap;
+            while(j >= 0 && temp < arr[j]){
+                arr[j + gap] = arr[j];
+                j -= gap;
+            }
+            arr[j + gap] = temp;
+        }
+    }
+}
+
 #define ARRSIZE 10
 
 int main(){
@@ -144,7 +169,8 @@ int main(){
     printArr(arr, ARRSIZE);
 //     bubbleSort(arr, ARRSIZE);
 //    quickSort(arr, 0, 9);
-    insertionSort(arr, ARRSIZE);
+//    insertionSort(arr, ARRSIZE);
+    shellSort(arr, ARRSIZE);
     printArr(arr, ARRSIZE);
     return 0;
 }
