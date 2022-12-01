@@ -127,7 +127,7 @@ void insertionSort(int arr[], int size){
     int temp;
     int j;
     for(int i = 1; i < size; i++){
-        temp = arr[i];
+        temp = arr[i];  // 这是待插入元素
         j = i - 1;
         while(j >= 0 && temp < arr[j]){
             arr[j + 1] = arr[j];
@@ -142,6 +142,7 @@ void insertionSort(int arr[], int size){
  * 选中一个步长，一般最开始为size的一般，然后每次除以2
  * 对步长当中的元素进行插入排序
  * 直到步长为0时，停止
+ * 其实就是插入排序外面套了一个步长变化的循环，然后内部循环的变化步长改成gap
  *
  * 时间复杂度：最好：O(n) 最坏：O(n2)
  * 空间复杂度：O(1)
@@ -149,15 +150,38 @@ void insertionSort(int arr[], int size){
  * */
 void shellSort(int arr[], int size){
     int temp, j;
-    for(int gap = size / 2; gap > 0; gap /= 2){
+    for(int gap = size / 2; gap > 0; gap /= 2){ // 修改步长
+        // 这里i++的原因是用来遍历下一组数据
+        // 这里和插入排序不同的地方就是，插入排序是一次把单个子数组遍历完，希尔排序是一次只遍历单个子数组当中的一个元素，紧接着就遍历下一个子数组了
         for(int i = gap; i < size; i++){
-            temp = arr[i];
-            j = i - gap;
-            while(j >= 0 && temp < arr[j]){
-                arr[j + gap] = arr[j];
+            temp = arr[i];  // 待插入元素
+            j = i - gap;    // 有序子数组中最后一个元素
+            while(j >= 0 && temp < arr[j]){ // 如果待插入元素小于arr[j]的话，就继续往前找位置
+                arr[j + gap] = arr[j];  // 并把有序子数组中的元素往后移
                 j -= gap;
             }
-            arr[j + gap] = temp;
+            arr[j + gap] = temp;    // 因为最后一次j还是多减了一个gap，所以要加上
+        }
+    }
+}
+
+/*
+ * 选择排序
+ * 分为有序数组和无序数组
+ * 每一次都从无序数组中找出最小或最大的那个放到有序数组末尾
+ *
+ * 时间复杂度：最好O(n2) 最坏O(n2)
+ * 空间复杂度：O(1)
+ * 不稳定 [5,3,5,2,9]
+ * */
+void selectSort(int arr[], int size) {
+    for(int i = 0; i < size - 1; i++){  // 遍历有序数组的末尾元素，这个末尾元素严格来说不算有序数组，这个末尾元素还不是有序数组当中最大或最小的那个
+        for(int j = i + 1; j < size; j++){  // 遍历无序数组找其中最小的
+            if(arr[i] > arr[j]){    // 这里为了减少代码行数，增加了空间复杂度，只要找到比末尾元素大或小的就替换一次
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
         }
     }
 }
@@ -165,12 +189,13 @@ void shellSort(int arr[], int size){
 #define ARRSIZE 10
 
 int main(){
-    int arr[ARRSIZE] = {4, 2, 3, 1, 6, 5, 9, 7, 8, 10};
-    printArr(arr, ARRSIZE);
+    int arr1[ARRSIZE] = {4, 2, 3, 1, 6, 5, 9, 7, 8, 10};
+    int arr2[ARRSIZE] = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
+    printArr(arr2, ARRSIZE);
 //     bubbleSort(arr, ARRSIZE);
 //    quickSort(arr, 0, 9);
 //    insertionSort(arr, ARRSIZE);
-    shellSort(arr, ARRSIZE);
-    printArr(arr, ARRSIZE);
+    selectSort(arr2, ARRSIZE);
+    printArr(arr2, ARRSIZE);
     return 0;
 }
