@@ -186,16 +186,60 @@ void selectSort(int arr[], int size) {
     }
 }
 
+/*
+ * 归并排序
+ * 首先进行分治，从中间将数组一分为二，然后两个子数组再分别进行归并
+ * 最后进行合并
+ *
+ * 合并当中，使用辅助数组进行排序
+ * 两个子数组分别进行比较，选择比较小的先放到辅助数组中
+ * 如果一个数组放完，那么就直接把另一个数组中的数按顺序放进去
+ * 辅助数组可以从0开始放
+ * 最后将辅助数组里面的数放到原数组当中
+ * 注意，是从left开始的
+ *
+ * 时间复杂度 最好O(nlogn) 最坏O(nlogn)
+ * 空间复杂度 O(n)
+ * 稳定
+ * */
+void merge(int arr[], int left, int mid, int right, int temp[]){
+    int i = left;
+    int j = mid + 1;
+    int k = 0;
+    while(i <= mid && j <= right){
+        if(arr[i] <= arr[j])
+            temp[k++] = arr[i++];
+        else
+            temp[k++] = arr[j++];
+    }
+    while(i <= mid)
+        temp[k++] = arr[i++];
+    while(j <= right)
+        temp[k++] = arr[j++];
+    for(i = 0; i < k; i++)
+        arr[i + left] = temp[i];
+}
+void mergeSort(int arr[], int left, int right, int temp[]) {
+    if(left < right){
+        int mid = (right + left) / 2;
+        mergeSort(arr, left, mid, temp);
+        mergeSort(arr, mid + 1, right, temp);
+        merge(arr, left, mid, right, temp);
+    }
+}
+
 #define ARRSIZE 10
 
 int main(){
     int arr1[ARRSIZE] = {4, 2, 3, 1, 6, 5, 9, 7, 8, 10};
     int arr2[ARRSIZE] = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
+    int temp[ARRSIZE] = {0};
     printArr(arr2, ARRSIZE);
 //     bubbleSort(arr, ARRSIZE);
 //    quickSort(arr, 0, 9);
 //    insertionSort(arr, ARRSIZE);
-    selectSort(arr2, ARRSIZE);
+//    selectSort(arr2, ARRSIZE);
+    mergeSort(arr2, 0, ARRSIZE - 1, temp);
     printArr(arr2, ARRSIZE);
     return 0;
 }
