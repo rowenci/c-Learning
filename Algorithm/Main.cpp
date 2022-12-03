@@ -25,9 +25,11 @@ int main(){
 */
 
 int main(){
-    int arr[ARRSIZE] = {4, 2, 3, 1, 6, 5, 9, 7, 8, 10};
-    printArr(arr, ARRSIZE);
+    int arr1[ARRSIZE] = {4, 2, 3, 1, 6, 5, 9, 7, 8, 10};
+    int arr2[ARRSIZE] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    printArr(arr2, ARRSIZE);
 //    cout << sequenceSearch(arr, ARRSIZE, 5) << endl;
-    cout << binarySearch1(arr, ARRSIZE, 5) << endl;
+//    cout << binarySearch1(arr2, ARRSIZE, 5) << endl;
+//    cout << binarySearch2(arr2, ARRSIZE, 0, ARRSIZE - 1, 5) << endl;
     return 0;
 }
