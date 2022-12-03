@@ -1,4 +1,4 @@
-# Install script for directory: E:/Code/Codes/cpp/c-Learning
+# Install script for directory: D:/code/codes/cpp/c-Learning
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,7 +34,7 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "E:/Code/CodeApp/jetbrain/apps/CLion/ch-0/222.4345.21/bin/mingw/bin/objdump.exe")
+  set(CMAKE_OBJDUMP "D:/code/codeApp/IntelliJApp/apps/CLion/ch-0/223.7571.171/bin/mingw/bin/objdump.exe")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "E:/Code/Codes/cpp/c-Learning/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/code/codes/cpp/c-Learning/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

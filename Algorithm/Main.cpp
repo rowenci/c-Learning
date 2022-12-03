@@ -8,6 +8,7 @@
 #define ARRSIZE 10
 
 /*
+// 排序算法
 int main(){
     int arr1[ARRSIZE] = {4, 2, 3, 1, 6, 5, 9, 7, 8, 10};
     int arr2[ARRSIZE] = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
