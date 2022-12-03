@@ -1,0 +1,3 @@
+D:\code\codeApp\IntelliJApp\apps\CLion\ch-0\223.7571.171\bin\cmake\win\bin\cmake.exe -E rm -f CMakeFiles\c_Learning.dir/objects.a
+D:\code\codeApp\IntelliJApp\apps\CLion\ch-0\223.7571.171\bin\mingw\bin\ar.exe qc CMakeFiles\c_Learning.dir/objects.a @CMakeFiles\c_Learning.dir\objects1.rsp
+D:\code\codeApp\IntelliJApp\apps\CLion\ch-0\223.7571.171\bin\mingw\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\c_Learning.dir/objects.a -Wl,--no-whole-archive -o c_Learning.exe -Wl,--out-implib,libc_Learning.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\c_Learning.dir\linklibs.rsp
