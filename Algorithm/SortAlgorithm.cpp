@@ -4,7 +4,6 @@
 #include "iostream"
 #include <ctime>
 #include <iomanip>
-#include "../Util.h"
 
 using namespace std;
 
@@ -19,7 +18,7 @@ using namespace std;
  * 空间复杂度：O(1)
  * 稳定
  * */
-void bubbleSort(int arr[], int size){
+static void bubbleSort(int arr[], int size){
     bool flag = false;  // 如果没发生交换，则已经有序，可以直接停止
     for(int i = 0; i < size - 1; i++){  // 为什么要-1呢？因为i最多只能到倒数第二个元素
         flag = false;
@@ -69,7 +68,7 @@ void bubbleSort(int arr[], int size){
  * 空间复杂度：O(nlogn)
  * 不稳定
  * */
-int partition1(int arr[], int left, int right){
+static int partition1(int arr[], int left, int right){
     int pivot = arr[left];  // 设置枢轴值，一般选left指向元素
     while(left < right){    // left == right时，划分停止
         while(left < right && arr[right] >= pivot)  // 从后往前找第一个比pivot小的
@@ -82,7 +81,7 @@ int partition1(int arr[], int left, int right){
     arr[left] = pivot;  // 找到枢轴值的位置，直接赋值
     return left;
 }
-int partition2(int arr[], int left, int right){
+static int partition2(int arr[], int left, int right){
     int begin = left;   // 记录最开始left的位置
     int pivot = arr[begin]; // 记录枢轴值
     while(left < right){    // left == right时，划分停止
@@ -104,7 +103,7 @@ int partition2(int arr[], int left, int right){
     arr[begin] = temp;
     return left;
 }
-void quickSort(int arr[], int left, int right){
+static void quickSort(int arr[], int left, int right){
     if(left < right){
         int pivot = partition2(arr, left, right);
         quickSort(arr, left, pivot - 1);
@@ -123,7 +122,7 @@ void quickSort(int arr[], int left, int right){
  * 空间复杂度 O(n)
  * 稳定
  * */
-void insertionSort(int arr[], int size){
+static void insertionSort(int arr[], int size){
     int temp;
     int j;
     for(int i = 1; i < size; i++){
@@ -148,7 +147,7 @@ void insertionSort(int arr[], int size){
  * 空间复杂度：O(1)
  * 不稳定
  * */
-void shellSort(int arr[], int size){
+static void shellSort(int arr[], int size){
     int temp, j;
     for(int gap = size / 2; gap > 0; gap /= 2){ // 修改步长
         // 这里i++的原因是用来遍历下一组数据
@@ -174,7 +173,7 @@ void shellSort(int arr[], int size){
  * 空间复杂度：O(1)
  * 不稳定 [5,3,5,2,9]
  * */
-void selectSort(int arr[], int size) {
+static void selectSort(int arr[], int size) {
     for(int i = 0; i < size - 1; i++){  // 遍历有序数组的末尾元素，这个末尾元素严格来说不算有序数组，这个末尾元素还不是有序数组当中最大或最小的那个
         for(int j = i + 1; j < size; j++){  // 遍历无序数组找其中最小的
             if(arr[i] > arr[j]){    // 这里为了减少代码行数，增加了空间复杂度，只要找到比末尾元素大或小的就替换一次
@@ -202,7 +201,7 @@ void selectSort(int arr[], int size) {
  * 空间复杂度 O(n)
  * 稳定
  * */
-void merge(int arr[], int left, int mid, int right, int temp[]){
+static void merge(int arr[], int left, int mid, int right, int temp[]){
     int i = left;
     int j = mid + 1;
     int k = 0;
@@ -219,7 +218,7 @@ void merge(int arr[], int left, int mid, int right, int temp[]){
     for(i = 0; i < k; i++)
         arr[i + left] = temp[i];
 }
-void mergeSort(int arr[], int left, int right, int temp[]) {
+static void mergeSort(int arr[], int left, int right, int temp[]) {
     if(left < right){
         int mid = (right + left) / 2;
         mergeSort(arr, left, mid, temp);
@@ -228,18 +227,3 @@ void mergeSort(int arr[], int left, int right, int temp[]) {
     }
 }
 
-#define ARRSIZE 10
-
-int main(){
-    int arr1[ARRSIZE] = {4, 2, 3, 1, 6, 5, 9, 7, 8, 10};
-    int arr2[ARRSIZE] = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
-    int temp[ARRSIZE] = {0};
-    printArr(arr2, ARRSIZE);
-//     bubbleSort(arr, ARRSIZE);
-//    quickSort(arr, 0, 9);
-//    insertionSort(arr, ARRSIZE);
-//    selectSort(arr2, ARRSIZE);
-    mergeSort(arr2, 0, ARRSIZE - 1, temp);
-    printArr(arr2, ARRSIZE);
-    return 0;
-}

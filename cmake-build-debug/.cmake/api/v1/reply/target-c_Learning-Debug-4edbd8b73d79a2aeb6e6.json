@@ -56,7 +56,9 @@
 			"sourceIndexes" : 
 			[
 				0,
-				1
+				1,
+				2,
+				3
 			]
 		}
 	],
@@ -94,14 +96,9 @@
 			"sourceIndexes" : 
 			[
 				0,
-				1
-			]
-		},
-		{
-			"name" : "Header Files",
-			"sourceIndexes" : 
-			[
-				2
+				1,
+				2,
+				3
 			]
 		}
 	],
@@ -110,7 +107,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "Algorithm/Sort/SortAlgorithm.cpp",
+			"path" : "Algorithm/SortAlgorithm.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -121,8 +118,15 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "Algorithm/Util.h",
-			"sourceGroupIndex" : 1
+			"compileGroupIndex" : 0,
+			"path" : "Algorithm/SearchAlgorithm.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Algorithm/Main.cpp",
+			"sourceGroupIndex" : 0
 		}
 	],
 	"type" : "EXECUTABLE"

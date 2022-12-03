@@ -49,14 +49,26 @@ cmake_ninja_workdir = E$:/Code/Codes/cpp/c-Learning/cmake-build-debug/
 
 build cmake_object_order_depends_target_c_Learning: phony || CMakeFiles/c_Learning.dir
 
-build CMakeFiles/c_Learning.dir/Algorithm/Sort/SortAlgorithm.cpp.obj: CXX_COMPILER__c_Learning_Debug E$:/Code/Codes/cpp/c-Learning/Algorithm/Sort/SortAlgorithm.cpp || cmake_object_order_depends_target_c_Learning
-  DEP_FILE = CMakeFiles\c_Learning.dir\Algorithm\Sort\SortAlgorithm.cpp.obj.d
+build CMakeFiles/c_Learning.dir/Algorithm/SortAlgorithm.cpp.obj: CXX_COMPILER__c_Learning_Debug E$:/Code/Codes/cpp/c-Learning/Algorithm/SortAlgorithm.cpp || cmake_object_order_depends_target_c_Learning
+  DEP_FILE = CMakeFiles\c_Learning.dir\Algorithm\SortAlgorithm.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\c_Learning.dir
-  OBJECT_FILE_DIR = CMakeFiles\c_Learning.dir\Algorithm\Sort
+  OBJECT_FILE_DIR = CMakeFiles\c_Learning.dir\Algorithm
 
 build CMakeFiles/c_Learning.dir/Algorithm/Util.cpp.obj: CXX_COMPILER__c_Learning_Debug E$:/Code/Codes/cpp/c-Learning/Algorithm/Util.cpp || cmake_object_order_depends_target_c_Learning
   DEP_FILE = CMakeFiles\c_Learning.dir\Algorithm\Util.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\c_Learning.dir
+  OBJECT_FILE_DIR = CMakeFiles\c_Learning.dir\Algorithm
+
+build CMakeFiles/c_Learning.dir/Algorithm/SearchAlgorithm.cpp.obj: CXX_COMPILER__c_Learning_Debug E$:/Code/Codes/cpp/c-Learning/Algorithm/SearchAlgorithm.cpp || cmake_object_order_depends_target_c_Learning
+  DEP_FILE = CMakeFiles\c_Learning.dir\Algorithm\SearchAlgorithm.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\c_Learning.dir
+  OBJECT_FILE_DIR = CMakeFiles\c_Learning.dir\Algorithm
+
+build CMakeFiles/c_Learning.dir/Algorithm/Main.cpp.obj: CXX_COMPILER__c_Learning_Debug E$:/Code/Codes/cpp/c-Learning/Algorithm/Main.cpp || cmake_object_order_depends_target_c_Learning
+  DEP_FILE = CMakeFiles\c_Learning.dir\Algorithm\Main.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\c_Learning.dir
   OBJECT_FILE_DIR = CMakeFiles\c_Learning.dir\Algorithm
@@ -69,7 +81,7 @@ build CMakeFiles/c_Learning.dir/Algorithm/Util.cpp.obj: CXX_COMPILER__c_Learning
 #############################################
 # Link the executable c_Learning.exe
 
-build c_Learning.exe: CXX_EXECUTABLE_LINKER__c_Learning_Debug CMakeFiles/c_Learning.dir/Algorithm/Sort/SortAlgorithm.cpp.obj CMakeFiles/c_Learning.dir/Algorithm/Util.cpp.obj
+build c_Learning.exe: CXX_EXECUTABLE_LINKER__c_Learning_Debug CMakeFiles/c_Learning.dir/Algorithm/SortAlgorithm.cpp.obj CMakeFiles/c_Learning.dir/Algorithm/Util.cpp.obj CMakeFiles/c_Learning.dir/Algorithm/SearchAlgorithm.cpp.obj CMakeFiles/c_Learning.dir/Algorithm/Main.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\c_Learning.dir

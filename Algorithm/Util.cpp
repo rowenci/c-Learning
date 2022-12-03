@@ -4,7 +4,7 @@
 #include "iostream"
 
 using namespace std;
-void printArr(int arr[], int size){
+static void printArr(int arr[], int size){
     for(int i = 0; i < size; i++)
         cout << arr[i] << " ";
     cout << endl;

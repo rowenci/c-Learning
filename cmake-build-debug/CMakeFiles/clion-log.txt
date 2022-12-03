@@ -1,13 +1,4 @@
 E:\Code\CodeApp\jetbrain\apps\CLion\ch-0\222.4345.21\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=E:/Code/CodeApp/jetbrain/apps/CLion/ch-0/222.4345.21/bin/ninja/win/ninja.exe -G Ninja -S E:\Code\Codes\cpp\c-Learning -B E:\Code\Codes\cpp\c-Learning\cmake-build-debug
 -- Configuring done
-CMake Error at CMakeLists.txt:6 (add_executable):
-  Cannot find source file:
-
-    Algorithm/Sort/SortAlgorithm.cpp
-
-
-CMake Error at CMakeLists.txt:6 (add_executable):
-  No SOURCES given to target: c_Learning
-
-
-CMake Generate step failed.  Build files cannot be regenerated correctly.
+-- Generating done
+-- Build files have been written to: E:/Code/Codes/cpp/c-Learning/cmake-build-debug
