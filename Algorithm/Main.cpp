@@ -1,6 +1,7 @@
 //
 // Created by Rowenci on 2022/12/3.
 //
+#include <algorithm>
 #include "SortAlgorithm.cpp"
 #include "SearchAlgorithm.cpp"
 #include "Util.cpp"
@@ -30,6 +31,6 @@ int main(){
     printArr(arr2, ARRSIZE);
 //    cout << sequenceSearch(arr, ARRSIZE, 5) << endl;
 //    cout << binarySearch1(arr2, ARRSIZE, 5) << endl;
-//    cout << binarySearch2(arr2, ARRSIZE, 0, ARRSIZE - 1, 5) << endl;
+    cout << binarySearch2(arr2, ARRSIZE, 0, ARRSIZE - 1, 10) << endl;
     return 0;
 }

@@ -39,6 +39,7 @@ static int binarySearch1(int arr[], int length, int value){
  * 递归方式
  */
 static int binarySearch2(int arr[], int length, int low, int high, int value){
+    if(low > high) return -1;
     int mid = (low + high) / 2;
     if(arr[mid] == value)
         return mid;
