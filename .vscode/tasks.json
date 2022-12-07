@@ -17,7 +17,7 @@
             "-std=c++17"
         ],
         "options": {
-            "cwd": "D:\\code\\codeApp\\MinGW\\bin"	/*修改成自己bin目录，这里的路径和电脑里复制的文件目录有一点不一样，这里是两个反斜杠\\*/
+            "cwd": "E:\\code\\codeApp\\MinGW\\bin"	/*修改成自己bin目录，这里的路径和电脑里复制的文件目录有一点不一样，这里是两个反斜杠\\*/
         },
         "problemMatcher":[
             "$gcc"

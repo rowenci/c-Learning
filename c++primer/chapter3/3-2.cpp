@@ -10,6 +10,5 @@ int main(){
     string s5("rowenci");   // 直接初始化
     s5.size();
     map<int, bool> test;
-    test.
     return -1;
 }
