@@ -3,7 +3,7 @@
 using namespace std;
 
 void process(int a){
-    cout << "我是子线程 " << std::this_thread::get_id() << std::endl;
+    cout << "我是子线程 " << this_thread::get_id() << endl;
     cout << "传入的参数是" << a << endl;
 }
 
